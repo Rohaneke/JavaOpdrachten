@@ -3,8 +3,7 @@ const studenten = [
   { "studentnaam": "David", "studentnummer": "12345" }
 ];
 
-const outputDiv = document.getElementById('personen');
-let kanker = '';
+let outputDiv = document.getElementById('personen');
 
 for (const student of studenten) {
   let tr = document.createElement('tr');
@@ -17,7 +16,5 @@ for (const student of studenten) {
   tr.appendChild(tdNaam);
   tr.appendChild(tdNummer);
 
-  kanker += tr.outerHTML;
+  outputDiv.appendChild(tr.outerHTML);
 }
-
-outputDiv.innerHTML = kanker;
